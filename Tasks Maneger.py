@@ -12,7 +12,7 @@ def view_tasks():
     if tasks:
         print("Tasks: ")
         for idx, task in enumerate(tasks, start=1):
-            print(f"{idx}. Tile: {task['title']}, Description: {task['description']}")
+            print(f"{idx}. Title: {task['title']}, Description: {task['description']}")
     else:
         print("No tasks available.")
 
@@ -41,12 +41,12 @@ def delete_task():
             deleted_task = tasks.pop(task_index)
             print(f"Task '{deleted_task['title']} deleted successfully!!")
         else:
-            print("Invalid taks index.")
+            print("Invalid task index.")
     else:
-        print("No taks available.")
+        print("No task available.")
 
 while True:
-    print("\nInteractive Task Maneger")
+    print("\nInteractive Task Manager")
     print("1. Add Task")
     print("2. View Tasks")
     print("3. Updated Task")
@@ -64,7 +64,8 @@ while True:
     elif choice == "4":
         delete_task()
     elif choice == "5":
-        print("exiting the Task Manager. Goodbye!!")
+        print("Exiting the Task Manager. Goodbye!!")
         break
     else:
+
         print("Invalid choice. Please take a valid option (1-5)")
